@@ -45,26 +45,8 @@ This analysis directly addresses four (4) critical business problems through dat
 # Technical Stack (The Tools Checklist)
 
 ## Database: SQL (for data cleaning, transformation, and aggregation)
-
 ## Visualization:Power BI (for interactive dashboard creation)
-
 ## Documentation: GitHub (for project management and portfolio presentation)
-
-# Dashboard Visualizations
-
-The Power BI dashboard includes, but is not limited to, the following visualizations:
-
-* **Order Volume by Hour and Day:** Heatmap demonstrating hourly and daily staffing requirements.
-
-* **Revenue by Department (Top 5/Bottom 5):** Bar chart for quick identification of core drivers.
-
-* **Aisle Profitability Scatter Plot:** Visualizes demand (x-axis) vs. profit margin (y-axis) to flag low-profit, high-demand areas.
-
-* **Monthly Sales Trend Line:** Includes a moving average to highlight seasonal spikes and predict the upcoming holiday demand.
-
-![Instacart_Dashboard_Preview jpeg](https://github.com/user-attachments/assets/57cc8031-3543-478f-af9a-f0668bfd562a)
-
-![Instacart_Dashboard_2](https://github.com/user-attachments/assets/41c618ec-f31b-4733-a475-40ab2a8a7ae3)
 
 # Detailed SQL Analysis and Business Questions
 
@@ -97,6 +79,22 @@ The following specific questions were translated into complex SQL queries to gen
 * **Business Context:** The foundation for labor cost optimization. Granular order volume data by hour is necessary to align employee shifts precisely with customer demand peaks, minimizing unnecessary labor during slow periods.
 * **Strategic Approach:** Requires simple aggregation, counting orders (`COUNT(order_id)`) and grouping by the `order_hour_of_day` column, combined with the `order_day_of_week` to identify specific staffing windows.
 
+# Dashboard Visualizations
+
+The Power BI dashboard includes, but is not limited to, the following visualizations:
+
+* **Order Volume by Hour and Day:** Heatmap demonstrating hourly and daily staffing requirements.
+
+* **Revenue by Department (Top 5/Bottom 5):** Bar chart for quick identification of core drivers.
+
+* **Aisle Profitability Scatter Plot:** Visualizes demand (x-axis) vs. profit margin (y-axis) to flag low-profit, high-demand areas.
+
+* **Monthly Sales Trend Line:** Includes a moving average to highlight seasonal spikes and predict the upcoming holiday demand.
+
+![Instacart_Dashboard_Preview jpeg](https://github.com/user-attachments/assets/57cc8031-3543-478f-af9a-f0668bfd562a)
+
+![Instacart_Dashboard_2](https://github.com/user-attachments/assets/41c618ec-f31b-4733-a475-40ab2a8a7ae3)
+
 # Key Findings & Strategic Recommendations
 
 This section translates the data from the dashboard visualizations directly into actionable business insights for Instacart management.
@@ -116,3 +114,18 @@ This section translates the data from the dashboard visualizations directly into
   * **Result:** Monthly sales volume shows a clear **seasonal spike** in **October and November**, reaching a peak of over **1,647K** orders. Volume drops significantly in the middle of the year, particularly in July.
   * **Recommendation:** Ensure **inventory and marketing spend are budgeted to increase by at least 5%** leading into the Q4 holiday season (September/October). Conversely, reduce inventory commitments for non-perishables during the low-volume months of July and August.
  
+# Conclusion & Future Work
+
+This Instacart Capstone successfully translated high-volume e-commerce data into actionable strategic recommendations focused on maximizing efficiency and profit margins. The results offer clear pathways for the management team to optimize purchasing (e.g., focusing on Personal Care and Snacks), streamline inventory (e.g., removing dead stock), and refine staffing models (e.g., aligning shifts with 9 AM to 1 PM peak demand).
+
+The project proves the power of combining SQL for precise data extraction and Power BI for impactful visual storytelling.
+
+### Future Enhancements:
+
+To further expand the business value of this analysis, the following enhancements are recommended:
+
+* **Geo-Spatial Analysis:** Integrate location data to analyze delivery time versus customer satisfaction by region, allowing for optimization of warehouse placement or delivery routes.
+
+* **Customer Segmentation:** Use RFM (Recency, Frequency, Monetary) analysis to group customers into distinct segments (e.g., "Loyal" vs. "High-Value") to build targeted, profit-maximizing marketing campaigns.
+
+* **Predictive Modeling:** Implement a basic time-series forecast model (via Python integration) to predict daily order volume for the next 30 days, enabling proactive inventory purchasing.
